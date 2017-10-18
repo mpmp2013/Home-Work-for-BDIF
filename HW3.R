@@ -6,7 +6,7 @@ digest("I learn a lot from this class when I am proper listening to the professo
 digest("I do not learn a lot from this class when I am absent and playing on my Iphone","sha256")
 
 #HW3.3
-
+json_file
 
 #HW3.4
 #install.packages("rjson", repos="http://cran.us.r-project.org")
@@ -32,3 +32,5 @@ ndiffs(dcrix)
 Acf(dcrix)
 Pacf(dcrix)
 
+install.packages("rugarch")
+library(rugarch)
