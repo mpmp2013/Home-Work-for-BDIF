@@ -6,7 +6,7 @@ digest("I learn a lot from this class when I am proper listening to the professo
 digest("I do not learn a lot from this class when I am absent and playing on my Iphone","sha256")
 
 #HW3.3
-json_file
+json_RAM <- toJSON(RAM_size,method = "C")
 
 #HW3.4
 #install.packages("rjson", repos="http://cran.us.r-project.org")
@@ -19,6 +19,7 @@ lst <- lapply(json_data,function(x){
 })
 crix_data_frame <- Reduce(rbind,lst)
 plot(crix_data_frame$date,crix_data_frame$price)
+
 #install.packages("forecast")
 #install.packages("tseries")
 library(forecast)
