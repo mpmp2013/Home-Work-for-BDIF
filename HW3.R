@@ -6,6 +6,7 @@ digest("I learn a lot from this class when I am proper listening to the professo
 digest("I do not learn a lot from this class when I am absent and playing on my Iphone","sha256")
 
 #HW3.3
+library(rjson)
 json_RAM <- toJSON(RAM_size,method = "C")
 
 #HW3.4
