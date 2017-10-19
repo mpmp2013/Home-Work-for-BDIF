@@ -33,6 +33,3 @@ plot(dcrix)
 ndiffs(dcrix)
 Acf(dcrix)
 Pacf(dcrix)
-
-install.packages("rugarch")
-library(rugarch)
