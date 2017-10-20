@@ -25,11 +25,20 @@ plot(crix_data_frame$date,crix_data_frame$price)
 #install.packages("tseries")
 library(forecast)
 library(tseries)
-plot(crix_data_frame)
+ts.plot(crix_data_frame$price)
 Acf(crix_data_frame$price)
-ndiffs(crix_data_frame$price)
-dcrix <- diff(crix_data_frame$price, lag = 2)
-plot(dcrix)
-ndiffs(dcrix)
-Acf(dcrix)
-Pacf(dcrix)
+
+for(i in 1:length(crix_data_frame$price)){
+  crixreturn[i] <- log(crix_data_frame$price[i+1]/crix_data_frame$price[i])
+}
+ts.plot(crixreturn)
+Box.test(crixreturn, type = "Ljung-Box", lag = 20)
+autocorr = acf(crixreturn, lag.max = 20, ylab = "Sample Autocorrelation", main = NA, 
+               lwd = 2, ylim = c(-0.3, 1))
+Acf(crixreturn)
+Pacf(crixreturn)
+arima(crixreturn,order = c(2,0,2))
+
+
+
+
