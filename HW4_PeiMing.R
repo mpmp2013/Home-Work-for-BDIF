@@ -18,6 +18,7 @@ efcrix_data_frame <- as.data.frame(efcrix)
 library(dplyr)
 sum_crix <- cbind(crix_data_frame,ecrix_data_frame,efcrix_data_frame)
 #figure3
+ts.plot(sum_crix$price)
 lines(sum_crix$price,col="black",lwd=0.5)
 lines(sum_crix$ecrix,col="blue",lwd=1)
 lines(sum_crix$efcrix,col="red",lwd=1)
